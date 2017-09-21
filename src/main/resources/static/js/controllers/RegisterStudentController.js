@@ -1,6 +1,7 @@
-app.controller('RegisterStudentController', ['$scope','$location', function($scope,$location) {
+app.controller('RegisterStudentController', ['$scope','$location', '$http' ,function($scope,$location,$http) {
 
     $scope.students = [];
+    $scope.careers = [];
 
     $scope.resetNewStudent = function(){
             $scope.newStudent = {
@@ -11,6 +12,21 @@ app.controller('RegisterStudentController', ['$scope','$location', function($sco
             }
     }
 
+    $scope.loadStudents = function(){
+            $http.get('/students').then(function(response){
+                $scope.students = response.data._embedded.students;
+            });
+            $scope.resetNewStudent();
+    }
+
+    $scope.loadCareers = function()
+    {
+            $http.get('/careers').then(function(response)
+            {
+                $scope.careers = response.data._embedded.careers;
+            });
+    }
+
     $scope.send = function(){
             console.log($scope.newStudent);
             var student = {
@@ -18,7 +34,13 @@ app.controller('RegisterStudentController', ['$scope','$location', function($sco
                 "mail":$scope.newStudent.mail,
                 "ingress":$scope.newStudent.ingress,
                 "rut":$scope.newStudent.rut,
+                "career":$scope.newStudent.career,
             };
+
+            $http.post('/students',student)
+            .then(function(response){
+                console.log(response);
+                $scope.loadStudents();
 
             $scope.loadStudents();
             });
@@ -33,5 +55,5 @@ app.controller('RegisterStudentController', ['$scope','$location', function($sco
     }
 
     $scope.loadStudents();
-
+    $scope.loadCareers();
 }]);
