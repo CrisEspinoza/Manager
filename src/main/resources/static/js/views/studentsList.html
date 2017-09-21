@@ -1,17 +1,24 @@
 <div class="container">
-    <table style="width:100%">
-        <tr>
-            <th>Nombre</th>
-            <th>RUT</th>
-            <th>Ingreso</th>
-            <th>Correo</th>
-            <th>Carrera</th>
-        </tr>
-        <tr ng-repeat = "x in students">
-            <td>{{x.name | capitalize}}</td>
-            <td>{{x.rut}}</td>
-            <td>{{x.ingress}}</td>
-            <td>{{x.mail}}</td>
-            <td>{{x.career}}</td>
-        </tr>
-    </table>
+    <div class="panel panel-default">
+        <div class="panel-heading">Lista de estudiantes</div>
+        <div class="panel-body">
+            <table class="table table-hover">
+                <tr>
+                    <th>Nombre</th>
+                    <th>RUT</th>
+                    <th>Ingreso</th>
+                    <th>Correo</th>
+                    <th>Carrera</th>
+                </tr>
+                <tr ng-repeat = "x in students">
+                    <td>{{x.name}}</td>
+                    <td>{{x.rut}}</td>
+                    <td>{{x.ingress}}</td>
+                    <td>{{x.mail}}</td>
+                    <td>None</td>
+                </tr>
+            </table>
+        </div>
+        <div class="panel-footer"></div>
+    </div>
+</div>
