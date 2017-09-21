@@ -1,0 +1,17 @@
+<div class="container">
+    <table style="width:100%">
+        <tr>
+            <th>Nombre</th>
+            <th>RUT</th>
+            <th>Ingreso</th>
+            <th>Correo</th>
+            <th>Carrera</th>
+        </tr>
+        <tr ng-repeat = "x in students">
+            <td>{{x.name | capitalize}}</td>
+            <td>{{x.rut}}</td>
+            <td>{{x.ingress}}</td>
+            <td>{{x.mail}}</td>
+            <td>{{x.career}}</td>
+        </tr>
+    </table>

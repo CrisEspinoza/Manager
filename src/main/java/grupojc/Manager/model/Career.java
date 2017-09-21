@@ -24,6 +24,10 @@ public class Career {
         this.name = name;
         this.students = students;
     }
+
+    public Career() {
+    }
+
     //endregion
     //region Getters and Setters
     public long getId_career() {

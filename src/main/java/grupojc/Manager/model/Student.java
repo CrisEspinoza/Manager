@@ -41,6 +41,10 @@ public class Student {
         this.ingress = ingress;
         this.career = career;
     }
+
+    public Student() {
+    }
+
     //endregion
     //region Getters and Setters
     public void setId_student(long id_student) {

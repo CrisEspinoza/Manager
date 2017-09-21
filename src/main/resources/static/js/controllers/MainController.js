@@ -4,11 +4,11 @@ app.controller('MainController', ['$scope','$location', function($scope,$locatio
 
     $scope.registerStudent = $location.path() === '/registerStudent';
     $scope.registerCareer = $location.path() === '/registerCareer';
-    $scope.students = $location.path() === '/students';
+    $scope.students = $location.path() === '/studentsList';
 
     $scope.navigation = [
     {"text":"Agregar Estudiante",   "link":"#!/registerStudent", "condition":$scope.registerStudent},
     {"text":"Agregar Carrera",   "link":"#!/registerCareer", "condition":$scope.registerCareer},
-    {"text":"Estudiantes",   "link":"#!/students", "condition":$scope.students},
+    {"text":"Estudiantes",   "link":"#!/studentsList", "condition":$scope.studentsList},
     ]
 }]);
