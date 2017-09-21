@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="Myapp" ng-controller="MainController">
+<html ng-app="Myapp" ng-controller="RegisterUserController">
 <head>
     <meta charset="UTF-8">
     <title> {{ title }} </title>
@@ -13,18 +13,6 @@
     <script type="text/javascript" src="js/controllers/MainController.js"></script>
     <script type="text/javascript" src="js/utils/filters.js"></script>
 <body>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header" >
-            <a class="navbar-brand" href="#"> {{ title }} </a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li ng-repeat="element in navigation" class="{{ element.condition ? 'active' : '' }}"><a ng-href="{{element.link}}">{{element.text}}</a> </li>
-        </ul>
-    </div>
-</nav>
-<main>
-    <div ng-view></div>
-</main>
+
 </body>
 </html>
