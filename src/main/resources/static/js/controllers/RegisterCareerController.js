@@ -14,6 +14,7 @@ app.controller('RegisterCareerController', ['$scope','$location','$http', functi
         {
            $scope.careers = response.data._embedded.careers;
         });
+         $scope.resetNewCareer();
     }
 
     $scope.send = function(){
