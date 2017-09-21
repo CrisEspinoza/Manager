@@ -1,3 +1,38 @@
 <div>
-    <h1>Soy un estudiante</h1>
+        <h2>Nombre</h2>
+        <tr>
+                <input type="text" ng-model="newPokemon.name">
+        </tr>
+
+        <input ng-click="send()" type="button" value="Agregar">
+
+        <h2>Ingrese su rut</h2>
+        <tr>
+            <td>
+                <input name="usu_rut" size="9" maxlength="8" id="usu_rut" type="text" />
+                -
+                <input name="DV" size="2" maxlength="1" type="text" id="DV" />
+            </td>
+        </tr>
+
+        <input ng-click="send()" type="button" value="Ingresar">
+
+        <h2> Ingrese su correo </h2>
+        <tr>
+            <td>
+                <input name="correo" size="40" id="correo" type="text" />
+                @
+                <input type="text" name="example" list="exampleList">
+                <datalist id="exampleList">
+                    <option value="usach.cl">
+                    <option value="hotmail.com">
+                    <option value="hotmail.cl">
+                    <option value="hotmail.es">
+                    <option value="gmail.com">
+                </datalist>
+            </td>
+        </tr>
+
+        <h2> <input ng-click="send()" type="button" value="Ingresar Informacion">  </h2>
+
 </div>
