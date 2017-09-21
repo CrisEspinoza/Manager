@@ -10,6 +10,10 @@ app.config(function($routeProvider){
                     templateUrl: 'js/views/registerCareer.html',
                     controller: 'RegisterCareerController'
         })
+        .when('/students',{
+                    templateUrl: 'js/views/students.html',
+                    controller: 'StudentsController'
+        })
         .otherwise({
             redirectTo: '/index'
         });
