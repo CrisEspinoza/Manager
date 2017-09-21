@@ -1,8 +1,8 @@
 --careers
-insert into career (name) values ('Ingeniería Civil Informática');
-insert into career (name) values ('Ingeniería Civil Eléctrica');
-insert into career (name) values ('Ingeniería Ejecución Informática');
-insert into career (name) values ('Ingeniería Civil en Memes');
+insert into career (name) values ('Ingenieria Civil Informatica');
+insert into career (name) values ('Ingenieria Civil Electrica');
+insert into career (name) values ('Ingenieria Ejecución Informatica');
+insert into career (name) values ('Ingenieria Civil en Memes');
 
 --students
 insert into student (ingress, mail, name, rut, id_career) values (2015, 'javier.arredondo.c@usach.cl', 'Javier', 194487185, 1);
