@@ -1,8 +1,25 @@
-<div>
-    <h2 >Nombre  </h2>
-    <tr>
-        <input type="text" ng-model="newPokemon.name">
-    </tr>
-
-    <h2 class="text-center"> <input ng-click="send()" type="button" value="Ingresar Informacion">  </h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <form method="POST">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Nuevo estudiante </div>
+                    <div class="panel-body">
+                        <!-- Primera fila Datos personales-->
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label>Carrera:</label>
+                                <input type="text" name="name" class="form-control" placeholder="Ingenieria Informatica">
+                            </div>
+                        </div>
+                        <!-- No hay más filas-->
+                    </div>
+                    <div class="panel-footer">
+                        <input class="btn btn-primary" ng-click="send()" type="button" value="Ingresar Informacion">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
+
