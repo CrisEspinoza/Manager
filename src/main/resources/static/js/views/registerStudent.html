@@ -35,12 +35,18 @@
                                     <input type="text" ng-model="newStudent.ingress" name="anoingreso" class="form-control" placeholder="1234">
                                 </div>
                             </div>
-                            <label>Carrera:</label>
-                            <select ng-model="newStudent.career">
-                                <option value="0" selected="true">Ninguna</option>
-                                <option ng-repeat="career in careers" value="{{career._links.self.href }}">{{ career.name }}</option>
-                            </select>
 
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label> Carrera: </label>
+                                    <div>
+                                        <select ng-model="newStudent.career">
+                                            <option value="0" selected="true">Ninguna</option>
+                                            <option ng-repeat="career in careers" value="{{career._links.self.href }}">{{ career.name }}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
 
                             <!-- No hay más filas-->
                         </div>
