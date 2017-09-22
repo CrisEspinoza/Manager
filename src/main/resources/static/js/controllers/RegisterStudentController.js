@@ -2,6 +2,7 @@ app.controller('RegisterStudentController', ['$scope','$location', '$http' ,func
 
     $scope.students = [];
     $scope.careers = [];
+    $scope.years = [];
 
     $scope.resetNewStudent = function(){
             $scope.newStudent = {
@@ -33,7 +34,7 @@ app.controller('RegisterStudentController', ['$scope','$location', '$http' ,func
                 "name":$scope.newStudent.name,
                 "mail":$scope.newStudent.mail,
                 "ingress":$scope.newStudent.ingress,
-                "rut":$scope.newStudent.rut,
+                "rut":$scope.newStudent.rut1 + "-" + $scope.newStudent.rut2,
                 "career":$scope.newStudent.career,
             };
 
@@ -54,6 +55,16 @@ app.controller('RegisterStudentController', ['$scope','$location', '$http' ,func
             $scope.loadStudents();
     }
 
+    $scope.getYears = function()
+    {
+         for (var i = 1990; i <= 2017; i++)
+         {
+            $scope.years.push(i);
+         }
+    }
+
+
     $scope.loadStudents();
     $scope.loadCareers();
+    $scope.getYears();
 }]);

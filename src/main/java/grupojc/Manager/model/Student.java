@@ -17,7 +17,7 @@ public class Student {
     private String name;
 
     @NotNull
-    private int rut;
+    private String rut;
 
     @NotNull
     private String mail;
@@ -34,7 +34,7 @@ public class Student {
     }
     //endregion
     //region Constructor
-    public Student(String name, int rut, String mail, int ingress, Career career) {
+    public Student(String name, String rut, String mail, int ingress, Career career) {
         this.name = name;
         this.rut = rut;
         this.mail = mail;
@@ -59,11 +59,11 @@ public class Student {
         this.name = name;
     }
 
-    public int getRut() {
+    public String getRut() {
         return rut;
     }
 
-    public void setRut(int rut) {
+    public void setRut(String rut) {
         this.rut = rut;
     }
 

@@ -1,60 +1,58 @@
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <form method="POST">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Nuevo estudiante </div>
-                        <div class="panel-body">
-                            <!-- Primera fila Datos personales-->
-                            <div class="form-group row">
-                                <div class="col-md-4">
-                                    <label>Nombre:</label>
-                                    <input type="text" ng-model="newStudent.name" name="name" class="form-control" placeholder="Nombre">
-                                </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <form method="POST">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h2>Nuevo estudiante</h2></div>
+                    <div class="panel-body">
+                        <!-- Primera fila Nombre & RUT-->
+                        <div class="form-group row">
+                            <div class="col-md-7">
+                                <label> Nombre: </label>
+                                <input type="text" ng-model="newStudent.name" name="name" class="form-control" placeholder="Nombre">
                             </div>
-                            <!-- Segunda fila-->
-                            <div class="form-group row">
-                                <div class="col-md-4">
-                                    <label>Rut:</label>
-                                    <input type="text" ng-model="newStudent.rut" name="rut" class="form-control" placeholder="123456789">
-                                </div>
+                            <div class="col-md-3">
+                                <label> RUT: </label>
+                                <input type="text" ng-model="newStudent.rut1" class="form-control" placeholder="12345678">
                             </div>
-                            <!-- Cuarta fila -->
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <label> Mail: </label>
-                                    <input type="text" ng-model="newStudent.mail" name="direccion" class="form-control" placeholder="ejemplo@gmail.com">
-                                </div>
+                            <div class="col-md-1">
+                                <label><br></label>
+                                <input type="text" ng-model="newStudent.rut2" class="form-control" placeholder="9">
                             </div>
-
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <label> Ano de ingreso: </label>
-                                    <input type="text" ng-model="newStudent.ingress" name="anoingreso" class="form-control" placeholder="1234">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <label> Carrera: </label>
-                                    <div>
-                                        <select ng-model="newStudent.career">
-                                            <option value="0" selected="true">Ninguna</option>
-                                            <option ng-repeat="career in careers" value="{{career._links.self.href }}">{{ career.name }}</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- No hay más filas-->
                         </div>
-                        <div class="panel-footer">
-                            <input class="btn btn-primary" ng-click="send()" type="button" value="Ingresar Informacion">
+                        <!-- Segunda fila Mail-->
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <label> Correo electrónico: </label>
+                                <input type="text" ng-model="newStudent.mail" name="direccion" class="form-control" placeholder="ejemplo@dominio.com">
+                            </div>
                         </div>
+                        <!-- Tercera fila Año & Carrera-->
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label> Año de ingreso: </label>
+                                <div>
+                                    <select ng-model="newStudent.ingress" class="form-control" onmousedown="if(this.options.length>8){this.size=8;}"  onchange='this.size=0;' onblur="this.size=0;">
+                                        <option ng-repeat="year in years" value="{{ year }}">{{ year }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <label> Carrera: </label>
+                                <div>
+                                    <select ng-model="newStudent.career" class="form-control">
+                                        <option ng-repeat="career in careers" value="{{career._links.self.href }}">{{ career.name }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- No hay más filas-->
                     </div>
-                </form>
-            </div>
+                    <div class="panel-footer">
+                        <input class="btn btn-primary" ng-click="send()" type="button" value="Ingresar Informacion">
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
+</div>
