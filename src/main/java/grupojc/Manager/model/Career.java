@@ -3,6 +3,7 @@ package grupojc.Manager.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -26,6 +27,11 @@ public class Career {
     }
 
     public Career() {
+    }
+
+    public Career(String name){
+        this.name = name;
+        this.students = new HashSet<Student>();
     }
 
     //endregion

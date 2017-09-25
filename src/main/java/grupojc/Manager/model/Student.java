@@ -40,6 +40,7 @@ public class Student {
         this.mail = mail;
         this.ingress = ingress;
         this.career = career;
+        career.getStudents().add(this);
     }
 
     public Student() {
